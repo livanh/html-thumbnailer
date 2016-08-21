@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=phantomjs
+Exec=phantomjs _prefix_/bin/make-www-screenshot.js %i %o %s
+MimeType=text/html
