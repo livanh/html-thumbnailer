@@ -1,0 +1,8 @@
+Package: html-thumbnailer
+Architecture: all
+Maintainer: Livanh <livanh@bulletmail.org>
+Depends: phantomjs
+Priority: optional
+Version: 0.1
+Description: Thumbnailer for HTML files 
+ This script creates thumbnails for HTML files in PCManFM and other file managers, using the PhantomJS headless browser.
