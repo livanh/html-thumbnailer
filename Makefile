@@ -14,6 +14,7 @@ deb:
 	touch $(PACKAGE_NAME)_$(PACKAGE_VERSION)/DEBIAN/conffiles
 	mkdir -p $(PACKAGE_NAME)_$(PACKAGE_VERSION)/usr
 	cp -r src/* $(PACKAGE_NAME)_$(PACKAGE_VERSION)/usr
+	sed -i s:_prefix_:/usr: $(PACKAGE_NAME)_$(PACKAGE_VERSION)/usr/share/thumbnailers/html.thumbnailer
 	fakeroot dpkg-deb --build $(PACKAGE_NAME)_$(PACKAGE_VERSION)
 	rm -r $(PACKAGE_NAME)_$(PACKAGE_VERSION)
 
