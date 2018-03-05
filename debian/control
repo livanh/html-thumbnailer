@@ -1,0 +1,14 @@
+Source: html-thumbnailer
+Maintainer: Livanh <livanh@bulletmail.org>
+Section: gnome
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9)
+
+Package: html-thumbnailer
+Architecture: all
+Depends: phantomjs
+Priority: optional
+Section: gnome
+Description: Thumbnailer for HTML files 
+ This script creates thumbnails for HTML files in Nautilus, Nemo, PCManFM, and other file managers following GNOME cnventions, using the PhantomJS headless browser.
