@@ -1,14 +1,13 @@
-DESTDIR=/usr/local
-PREFIX=/usr/local
+prefix=/usr/local
 
 all:
 
 install:
-	mkdir -p $(DESTDIR)/bin
-	install -m 755 src/bin/make-www-screenshot.js $(DESTDIR)/bin
-	mkdir -p $(DESTDIR)/share/thumbnailers
-	install -m 644 src/share/thumbnailers/html.thumbnailer $(DESTDIR)/share/thumbnailers
-	sed -i s:_prefix_:$(PREFIX): $(DESTDIR)/share/thumbnailers/html.thumbnailer
+	mkdir -p $(DESTDIR)$(prefix)/bin
+	install -m 755 src/bin/make-www-screenshot.js $(DESTDIR)$(prefix)/bin
+	mkdir -p $(DESTDIR)$(prefix)/share/thumbnailers
+	install -m 644 src/share/thumbnailers/html.thumbnailer $(DESTDIR)$(prefix)/share/thumbnailers
+	sed -i s:_prefix_:$(prefix): $(DESTDIR)$(prefix)/share/thumbnailers/html.thumbnailer
 
 .PHONY: install all
 
